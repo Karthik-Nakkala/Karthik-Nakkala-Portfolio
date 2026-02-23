@@ -6,8 +6,8 @@ import {easeInOut, motion, scale} from "framer-motion"
 
 const SERVICE_ID=import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID=import.meta.env.VITE_TEMPLATE_ID;
-let PUBLIC_ID=import.meta.env.VITE_PUBLIC_ID;
-PUBLIC_ID='glhxwLrCHtAiL9QAY'
+const PUBLIC_ID=import.meta.env.VITE_PUBLIC_KEY;
+
 
 
 const Contact = () => {
