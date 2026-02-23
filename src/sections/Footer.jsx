@@ -47,7 +47,7 @@ const Footer = () => {
          }}>
           Karthik Nakkala
         </h1>
-        <div className='h-[3px] w-24 md:w-32 rounded-full bg-gradient-to-r from-[#0d58cc] via-cyan-300 to-emerald-400'/>
+        <div className='h-0.75 w-24 md:w-32 rounded-full bg-gradient-to-r from-[#0d58cc] via-cyan-300 to-emerald-400'/>
 
 
           <div className='flex gap-5 text-2xl md:text-3xl justify-center lg:justify-start'>

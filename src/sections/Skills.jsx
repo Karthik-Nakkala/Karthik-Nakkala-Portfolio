@@ -116,9 +116,9 @@ const Skills = () => {
 
       <div className='absolute inset-0 pointer-events-none'>
 
-        <div className='absolute top-1/4 left-0 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[120px] animate-pulse'/>
+        <div className='absolute top-1/4 left-0 w-75 h-75 rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[120px] animate-pulse'/>
 
-        <div className='absolute bottom-1/4 right-0 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[120px] animate-pulse'/>
+        <div className='absolute bottom-1/4 right-0 w-75 h-75 rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[120px] animate-pulse'/>
 
       </div>
 
@@ -141,7 +141,7 @@ const Skills = () => {
         
 >
           {repeated.map((s,i)=>(
-            <div key={i} className='flex flex-col items-center gap-2 min-w-[120px]'
+            <div key={i} className='flex flex-col items-center gap-2 min-w-30'
             aria-label={s.name}
             title={s.name}
             >

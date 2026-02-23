@@ -54,7 +54,7 @@ const Home = () => {
       <div className='absolute inset-0'>
         <div 
         className='absolute -top-32 -left-32 w-[70vw] sm:w-[z-500vw] md:w-[40vw]
-        h-[70vw] sm:h-[50vw] md:h-[40vw] max-w-[500px] max-h-[500px] rounded-full 
+        h-[70vw] sm:h-[50vw] md:h-[40vw] max-w-125 max-h-125 rounded-full 
         bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2]
         opacity-30 sm:opacity-20 md:opacity-10
         blur-[100px] sm:blur-[130px] md:blur-[150px] animate-pulse'>
@@ -62,7 +62,7 @@ const Home = () => {
         </div>
         <div 
         className='absolute bottom-0 right-0 w-[70vw] sm:w-[z-500vw] md:w-[40vw]
-        h-[70vw] sm:h-[50vw] md:h-[40vw] max-w-[500px] max-h-[500px] rounded-full 
+        h-[70vw] sm:h-[50vw] md:h-[40vw] max-w-125 max-h-125 rounded-full 
         bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2]
         opacity-30 sm:opacity-20 md:opacity-10
         blur-[100px] sm:blur-[130px] md:blur-[150px] animate-pulse delay-500'></div>
@@ -71,7 +71,7 @@ const Home = () => {
       <div className='relative z-10 h-full w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2'>
 
       <div className='flex flex-col justify-center h-full text-center lg:text-left relative'>
-          <div className='w-full lg:pr-24 mx-auto max-w-[48rem]'>
+          <div className='w-full lg:pr-24 mx-auto max-w-3xl'>
 
             <motion.div
             className='mb-3 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white tracking-wide min-h-[1.6em]'
@@ -81,7 +81,7 @@ const Home = () => {
               <span>
                 {roles[index].substring(0,subIndex)}
               </span>
-              <span className='inline-block w-[2px] ml-1 bg-white animate-pulse align-middle'
+              <span className='inline-block w-0.5 ml-1 bg-white animate-pulse align-middle'
               style={{height:'1em'}}>
 
               </span>

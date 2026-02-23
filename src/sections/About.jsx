@@ -35,7 +35,7 @@ const About = () => {
         viewport={{once:true,amount:0.4}}
         >
 
-          <motion.div className='relative w-[190px] h-[190px] md:w-[270px] md:h-[270px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#1cd8d2]/20 to-[#302b63]/20 border border-[#1cd8d2]/25'
+          <motion.div className='relative w-47.5 h-47.5  md:w-67.5 md:h-67.5 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#1cd8d2]/20 to-[#302b63]/20 border border-[#1cd8d2]/25'
           whileHover={{scale:1.02}}
           transition={{type:"spring", damping:18 , stiffness:200}}
           >
