@@ -30,7 +30,7 @@ const Footer = () => {
       <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_70%_35%,rgba(13,88,202,0.35),transparent_70%)]'/>
       <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(50%_55%_at_30%_70%,rgba(16,185,129,0.30),transparent_70%)]'/>
 
-      <motion.div className='relative z-10 px-4 sm:px-8 lg:px-10 py-16 md:py-20 flex flex-col items-center text-center space-y-6'
+      <motion.div className='relative z-10 px-3 sm:px-5 lg:px-6 py-10 md:py-13 flex flex-col items-center text-center space-y-4'
       initial={{opacity:0,y:30}}
       whileInView={{opacity:1,y:0}}
       transition={{duration:0.8}}
@@ -38,19 +38,19 @@ const Footer = () => {
 
         <h1 className='font-semibold leading-none text-white text-center select-none'
         style={{
-          fontSize:'clamp(3rem,5vw,14rem)',
+          fontSize:'clamp(1.92rem,3.2vw,8.96rem)',
           letterSpacing:'0.02em',
           lineHeight:0.9,
-          padding:"0 3vw",
+          padding:"0 1.92vw",
           whiteSpace:'nowrap',
-          textShadow:'0 2px 18px rgba(0,0,0,0.45)'
+          textShadow:'0 1.28px 11.52px rgba(0,0,0,0.45)'
          }}>
           Karthik Nakkala
         </h1>
-        <div className='h-0.75 w-24 md:w-32 rounded-full bg-gradient-to-r from-[#0d58cc] via-cyan-300 to-emerald-400'/>
+        <div className='h-0.5 w-15 md:w-20 rounded-full bg-gradient-to-r from-[#0d58cc] via-cyan-300 to-emerald-400'/>
 
 
-          <div className='flex gap-5 text-2xl md:text-3xl justify-center lg:justify-start'>
+          <div className='flex gap-3 text-xl md:text-2xl justify-center lg:justify-start'>
           
                         {socials.map(({Icon,label,href})=>(
                           <motion.a 
@@ -72,7 +72,7 @@ const Footer = () => {
 
                         </div>
 
-                        <p className='text-gray-300 italic max-w-xl'>
+                        <p className='text-gray-300 italic max-w-xl text-sm'>
                           “Excellence is never an accident. It is the result of high intention, sincere effort, and intelligent execution.”
                         </p>
 

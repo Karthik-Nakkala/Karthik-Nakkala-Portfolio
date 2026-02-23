@@ -83,7 +83,7 @@ const Skills = () => {
   useEffect(()=>{
     let id;
     let last=performance.now();
-    const speed=80;
+    const speed=54;
 
     const tick=(now)=>{
       const dt=(now-last)/1000;
@@ -112,23 +112,23 @@ const Skills = () => {
 
 
   return (
-    <section id='skills' className='h-1/2 w-full pb-8 flex flex-col items-center justify-center relative bg-black text-white overflow-hidden' ref={sectionRef}>
+    <section id='skills' className='h-1/2 w-full pb-6 flex flex-col items-center justify-center relative bg-black text-white overflow-hidden' ref={sectionRef}>
 
       <div className='absolute inset-0 pointer-events-none'>
 
-        <div className='absolute top-1/4 left-0 w-75 h-75 rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[120px] animate-pulse'/>
+        <div className='absolute top-1/4 left-0 w-50 h-50 rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[80px] animate-pulse'/>
 
-        <div className='absolute bottom-1/4 right-0 w-75 h-75 rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[120px] animate-pulse'/>
+        <div className='absolute bottom-1/4 right-0 w-50 h-50 rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[80px] animate-pulse'/>
 
       </div>
 
-      <motion.h2 className='text-4xl mt-5 sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63]'
+      <motion.h2 className='text-3xl mt-4 sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63]'
       initial={{opacity:0,y:-30}}
       whileInView={{opacity:1,y:0}}
       transition={{duration:0.5,delay:0.1}}>
         My Skills
       </motion.h2>
-      <motion.p className='mt-2 mb-8 text-white/90 text-base sm:text-lg z-10'
+      <motion.p className='mt-2 mb-6 text-white/90 text-sm sm:text-base z-10'
       initial={{opacity:0,y:-10}}
       whileInView={{opacity:1,y:0}}
       transition={{duration:0.5,delay:0.3}}>
@@ -136,12 +136,12 @@ const Skills = () => {
       </motion.p>
 
       <div className='relative w-full overflow-hidden'>
-        <motion.div className='flex gap-10 text-6xl text-[#1cd8d2]' ref={trackRef}
+        <motion.div className='flex gap-6 text-4xl text-[#1cd8d2]' ref={trackRef}
         style={{x,whiteSpace:"nowrap", willChange:"transform"}}
         
 >
           {repeated.map((s,i)=>(
-            <div key={i} className='flex flex-col items-center gap-2 min-w-30'
+            <div key={i} className='flex flex-col items-center gap-1 min-w-20'
             aria-label={s.name}
             title={s.name}
             >
@@ -149,7 +149,7 @@ const Skills = () => {
                 
                 {s.icon}
                 </span>
-                <p className='text-sm'> 
+                <p className='text-xs'> 
                   {s.name}
                 </p>
             </div>
