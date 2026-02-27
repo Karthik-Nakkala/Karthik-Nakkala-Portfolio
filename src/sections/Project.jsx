@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export const ProjectCard = ({ project }) => {
+
+  const [expander,setExpander]=useState(false);
+
   return (
     <motion.div 
       whileHover={{ y: -6, scale: 1.02 }}
@@ -25,8 +29,10 @@ export const ProjectCard = ({ project }) => {
         <h2 className="text-xl font-bold text-white tracking-tight">
           {project.name}
         </h2>
+
         
-        <p className="text-gray-300 text-xs leading-relaxed line-clamp-2">
+        
+        <p className={`text-gray-300 hover:cursor-pointer text-xs leading-relaxed ${!expander?'line-clamp-2':''}`} onClick={()=>setExpander(!expander)}>
           {project.description}
         </p>
 
