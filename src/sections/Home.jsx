@@ -7,6 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import avatar from '../assets/avator.png'
 
+
 const socials=[
   {Icon:FaLinkedin, label:"Linkedin", href:'https://linkedin.com/in/karthik-nakkala-528a32340'},
   {Icon:FaGithub, label:"Github", href:'https://github.com/Karthik-Nakkala'}
@@ -73,7 +74,7 @@ const Home = () => {
 
             <motion.div className='mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4'>
               <a href="#projects" className='px-5 py-2 rounded-full font-medium text-base text-white bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] shadow-lg hover:scale-105 transition-all'>View My Work</a>
-              <a href="/karthik_updated_resume.pdf" className='px-5 py-2 rounded-full text-base font-medium text-black bg-white hover:bg-gray-200 shadow-lg hover:scale-105 transition-all' download>My Resume</a>
+              <a href='/Karthik_Nakkala_Resume.pdf' className='px-5 py-2 rounded-full text-base font-medium text-black bg-white hover:bg-gray-200 shadow-lg hover:scale-105 transition-all' download>My Resume</a>
             </motion.div>
 
             <div className='mt-6 flex gap-4 text-xl justify-center lg:justify-start'>

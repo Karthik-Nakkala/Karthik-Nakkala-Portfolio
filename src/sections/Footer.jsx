@@ -9,6 +9,8 @@ const socials=[
 ]
 
 
+
+
 const glowVariants={
   initial:{
     scale:1,y:0,filter:'drop-shadow(0 0 0 rgba(0,0,0,0))'
