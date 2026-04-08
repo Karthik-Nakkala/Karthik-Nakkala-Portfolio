@@ -7,6 +7,7 @@ import weatherProjectOverview from '../assets/weather project overview.png'
 import projectManagement from '../assets/project management.png'
 import toDoList from '../assets/TO-DO-LIST.png'
 import imagesGallary from '../assets/images gallary.png'
+import zorvynFinance from '../assets/zorvyn finanace.png'
 
 
 const Projects = () => {
@@ -18,9 +19,13 @@ const Projects = () => {
        description:'This project is a full‑featured project management dashboard built from scratch with React, TypeScript, and Redux Toolkit. Its standout feature is a fully custom drag‑and‑drop system implemented without any external libraries—complete with mouse/touch support, a dynamic placeholder, drop‑zone highlighting, and smooth snap‑back. The list view uses a custom virtual scrolling engine to render 500+ tasks with zero performance degradation, while the timeline view provides a horizontal Gantt chart for task scheduling. Real‑time collaboration is simulated with avatar indicators that follow mock users across tasks, and all filters sync to the URL for shareable, bookmarkable views. The application achieved a perfect 100 Lighthouse performance score, showcasing advanced frontend engineering and a deep focus on user experience',
       buildSkills:'React with TypeScript,Redux Toolkit,Tailwind CSS'
     },
-    { name: 'Pharma Drug Controller', 
-      accessLink: 'https://safedose-manager.vercel.app/', coverImageUrl: pharmaProject, 
-      description: 'PharmaGuard is an AI-powered pharmacogenomic risk prediction tool designed to analyze patient VCF data and identify potential drug metabolism risks.', buildSkills: 'React, Tailwind Css, Framer Motion' },
+    {
+  name: 'Zorvyn Finance - Premium Personal Finance Dashboard',
+  accessLink: 'https://zorvyn-project-wine.vercel.app/',
+  coverImageUrl: zorvynFinance,   // ← nee image variable name enti ante adi pettuko
+  description: 'Built a modern, high-fidelity fintech dashboard with real-time balance tracking, dynamic charts, role-based access (Admin/Viewer), CSV export, and LocalStorage persistence for Zorvyn FinTech internship assignment.',
+  buildSkills: 'React 18, Redux Toolkit, Tailwind CSS v4, Recharts, TanStack Table v8'
+},
 
     { name: 'Personal Portfolio',
        accessLink: 'https://karthiknakkalaportfolio.netlify.app/',

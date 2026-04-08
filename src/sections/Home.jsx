@@ -73,7 +73,8 @@ const Home = () => {
 
             <motion.div className='mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4'>
               <a href="#projects" className='px-5 py-2 rounded-full font-medium text-base text-white bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] shadow-lg hover:scale-105 transition-all'>View My Work</a>
-              <a href='/karthikfrontendresume.pdf' target='_blank' rel='noopener noreferrer' className='flex items-center gap-2 px-5 py-2 rounded-full text-base font-medium text-black bg-white hover:bg-gray-200 shadow-lg hover:scale-105 transition-all' download='Karthik_Nakkala_Resume.pdf'><FaDownload className="text-sm" /> My Resume</a>
+
+            <a href='/Karthik_Nakkala_React_Frontend_Resume.pdf' target='_blank' rel='noopener noreferrer' className='flex items-center gap-2 px-5 py-2 rounded-full text-base font-medium text-black bg-white hover:bg-gray-200 shadow-lg hover:scale-105 transition-all' download='Karthik_Nakkala_Resume.pdf'><FaDownload className="text-sm" /> My Resume</a>
             </motion.div>
 
             <div className='mt-6 flex gap-4 text-xl justify-center lg:justify-start'>
