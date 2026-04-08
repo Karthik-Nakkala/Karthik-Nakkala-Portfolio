@@ -22,7 +22,7 @@ const Projects = () => {
     {
   name: 'Zorvyn Finance - Premium Personal Finance Dashboard',
   accessLink: 'https://zorvyn-project-wine.vercel.app/',
-  coverImageUrl: zorvynFinance,   // ← nee image variable name enti ante adi pettuko
+  coverImageUrl: zorvynFinance,   
   description: 'Built a modern, high-fidelity fintech dashboard with real-time balance tracking, dynamic charts, role-based access (Admin/Viewer), CSV export, and LocalStorage persistence for Zorvyn FinTech internship assignment.',
   buildSkills: 'React 18, Redux Toolkit, Tailwind CSS v4, Recharts, TanStack Table v8'
 },
