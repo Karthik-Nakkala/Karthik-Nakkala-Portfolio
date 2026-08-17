@@ -32,6 +32,7 @@ export default function App(){
       <Home/>
       <About/>
       <Skills/>
+      <Experience/>
       <Projects/>
       <Contact/>
       <Footer/>

@@ -30,6 +30,7 @@ const OverlayMenu = ({isOpen , onClose}) => {
             "Home",
             "About",
             "Skills",
+            "Experience",
             "Projects",
             "Contact"
           ].map((item,index)=>(
