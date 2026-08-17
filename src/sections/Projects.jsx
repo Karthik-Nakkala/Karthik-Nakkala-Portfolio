@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ProjectCard } from "./Project";
 import pharmaProject from "../assets/drug-contrpller-project-cover-image.png";
 import portfolioImage from "../assets/portfolio_cover_image.png";
@@ -11,9 +11,14 @@ import zorvynFinance from "../assets/zorvyn finanace.png";
 import DateDevCover from "../assets/datedevCoverImage.png";
 
 const Projects = () => {
+  const [filter, setFilter] = useState("All");
+
+  const categories = ["All", "Full-Stack", "Frontend", "JavaScript"];
+
   const projects = [
     {
       name: "DateDev",
+      category: "Full-Stack",
       accessLink: "https://datedev.shop/",
       coverImageUrl: DateDevCover,
       description:
@@ -23,6 +28,7 @@ const Projects = () => {
     },
     {
       name: "Project-Management",
+      category: "Frontend",
       accessLink: "https://velozityprojectmanagement.netlify.app/",
       coverImageUrl: projectManagement,
       description:
@@ -31,6 +37,7 @@ const Projects = () => {
     },
     {
       name: "Zorvyn Finance - Premium Personal Finance Dashboard",
+      category: "Frontend",
       accessLink: "https://zorvyn-project-wine.vercel.app/",
       coverImageUrl: zorvynFinance,
       description:
@@ -38,27 +45,27 @@ const Projects = () => {
       buildSkills:
         "React 18, Redux Toolkit, Tailwind CSS v4, Recharts, TanStack Table v8",
     },
-
     {
       name: "Personal Portfolio",
+      category: "Frontend",
       accessLink: "https://karthiknakkalaportfolio.netlify.app/",
       coverImageUrl: portfolioImage,
       description:
         'A high-performance, responsive web application designed to showcase technical expertise and project architecture. Developed with a "mobile-first" philosophy, the site features optimized asset loading, custom CSS animations, and a modular component structure for easy scalability. It serves as a central hub for my digital identity, integrating API-driven contact forms and a curated gallery of full-stack applications',
       buildSkills: "React, Tailwind Css, Framer Motion",
     },
-
     {
       name: "Weather predicter",
+      category: "JavaScript",
       accessLink: "https://weather-predicter-opal.vercel.app/",
       coverImageUrl: weatherProjectOverview,
       description:
         "A sleek, modern weather forecasting application designed for real-time climate monitoring. This tool leverages geolocation and external weather APIs to provide users with hyper-local weather data, including air quality, visibility, and 5-day forecasts, all wrapped in a responsive, high-performance interface",
       buildSkills: "Html,css,javascript",
     },
-
     {
       name: "Image Gallary",
+      category: "Frontend",
       accessLink: "https://celebraregallary-ebon.vercel.app/",
       coverImageUrl: imagesGallary,
       description:
@@ -66,6 +73,11 @@ const Projects = () => {
       buildSkills: "React,tailwind css",
     },
   ];
+
+  const filteredProjects =
+    filter === "All"
+      ? projects
+      : projects.filter((project) => project.category === filter);
 
   const glows = [
     "top-0 left-1/4 w-[335px] h-[335px] opacity-20 blur-[87px]",
@@ -75,7 +87,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen w-full relative bg-black text-white overflow-hidden py-16"
+      className="min-h-screen w-full relative bg-black text-white overflow-hidden py-20"
     >
       {/* Dynamic Background Glows */}
       <div className="absolute inset-0 pointer-events-none">
@@ -88,27 +100,62 @@ const Projects = () => {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4">
+        {/* Header Block */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#1cd8d2]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#1cd8d2]">
             Featured Projects
           </h2>
-          <p className="text-gray-400 mt-3 max-w-xl mx-auto text-sm">
-            A collection of technical solutions focused on performance, genetic
-            data analysis, and seamless user interfaces.
+          <p className="text-gray-400 mt-3 max-w-xl mx-auto text-sm sm:text-base">
+            A curated showcase of engineering solutions focusing on high-performance interfaces, global states, and full-stack architecture.
           </p>
         </motion.div>
 
-        {/* Responsive Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
+        {/* Filter Navigation Menu */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className="relative px-4 py-2 text-xs sm:text-sm font-semibold rounded-full border border-white/10 hover:border-white/20 transition-all cursor-pointer text-gray-300 hover:text-white"
+            >
+              {filter === cat && (
+                <motion.div
+                  layoutId="activeFilterPill"
+                  className="absolute inset-0 bg-gradient-to-r from-[#1cd8d2]/20 to-[#00bf8f]/20 border border-[#1cd8d2]/40 rounded-full"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
+              )}
+              <span className="relative z-10">{cat}</span>
+            </button>
           ))}
         </div>
+
+        {/* Responsive Grid with Framer Motion AnimatePresence Layout transitions */}
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project, index) => (
+              <motion.div
+                layout
+                key={project.name}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+                className="w-full flex justify-center"
+              >
+                <ProjectCard project={project} index={index} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
