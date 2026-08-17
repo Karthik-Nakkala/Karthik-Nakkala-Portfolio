@@ -23,7 +23,7 @@ const glowVariants={
 }
 
 const Home = () => {
-  const roles=useMemo(()=>['Web Developer','Software Developer']);
+  const roles=useMemo(()=>['Full Stack Developer','Software Developer','Web Developer']);
   const [index,setIndex]=useState(0);
   const [subIndex,setSubIndex]=useState(0);
   const [deleting,setDeleting]=useState(false);
